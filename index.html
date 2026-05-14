@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aatiffa Farhana | Portfolio</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#0f172a;
+      color:white;
+      scroll-behavior:smooth;
+    }
+
+    nav{
+      background:#111827;
+      padding:20px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      border-bottom:1px solid #1e293b;
+    }
+
+    nav h1{
+      color:#22d3ee;
+      font-size:28px;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:25px;
+    }
+
+    nav ul li a{
+      text-decoration:none;
+      color:white;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#22d3ee;
+    }
+
+    section{
+      padding:80px 8%;
+    }
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      background:linear-gradient(to right,#0f172a,#1e293b);
+    }
+
+    .hero img{
+      width:180px;
+      height:180px;
+      border-radius:50%;
+      border:5px solid #22d3ee;
+      object-fit:cover;
+      margin-bottom:25px;
+    }
+
+    .hero h2{
+      font-size:55px;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      font-size:20px;
+      color:#cbd5e1;
+      line-height:1.8;
+      max-width:800px;
+      margin:auto;
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:30px;
+      padding:14px 30px;
+      background:#22d3ee;
+      color:black;
+      text-decoration:none;
+      border-radius:10px;
+      font-weight:bold;
+      margin-right:15px;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#06b6d4;
+      transform:scale(1.05);
+    }
+
+    .title{
+      font-size:40px;
+      color:#22d3ee;
+      margin-bottom:40px;
+      text-align:center;
+    }
+
+    .about-box,
+    .contact-box{
+      background:#1e293b;
+      padding:40px;
+      border-radius:20px;
+      line-height:1.8;
+      box-shadow:0 0 15px rgba(0,0,0,0.3);
+    }
+
+    .skills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:20px;
+      justify-content:center;
+    }
+
+    .skill{
+      background:#1e293b;
+      padding:15px 30px;
+      border-radius:12px;
+      border:1px solid #334155;
+      transition:0.3s;
+    }
+
+    .skill:hover{
+      border-color:#22d3ee;
+      transform:translateY(-5px);
+    }
+
+    .projects-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:30px;
+    }
+
+    .project-card{
+      background:#1e293b;
+      padding:30px;
+      border-radius:20px;
+      transition:0.3s;
+      box-shadow:0 0 15px rgba(0,0,0,0.3);
+    }
+
+    .project-card:hover{
+      transform:translateY(-10px);
+    }
+
+    .project-card h3{
+      color:#22d3ee;
+      margin-bottom:20px;
+      font-size:28px;
+    }
+
+    .project-card p{
+      color:#cbd5e1;
+      line-height:1.8;
+    }
+
+    .project-card a{
+      display:inline-block;
+      margin-top:20px;
+      text-decoration:none;
+      color:black;
+      background:#22d3ee;
+      padding:12px 20px;
+      border-radius:10px;
+      font-weight:bold;
+    }
+
+    .certifications{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .certificate{
+      background:#1e293b;
+      border-radius:20px;
+      overflow:hidden;
+      transition:0.3s;
+      box-shadow:0 0 15px rgba(0,0,0,0.3);
+    }
+
+    .certificate:hover{
+      transform:scale(1.03);
+    }
+
+    .certificate img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+    }
+
+    .certificate h3{
+      padding:20px;
+      font-size:18px;
+      text-align:center;
+      line-height:1.6;
+    }
+
+    .contact-box{
+      text-align:center;
+      font-size:20px;
+    }
+
+    footer{
+      text-align:center;
+      padding:25px;
+      border-top:1px solid #1e293b;
+      color:#94a3b8;
+    }
+
+    @media(max-width:768px){
+
+      nav{
+        flex-direction:column;
+        gap:15px;
+      }
+
+      nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+
+      .hero h2{
+        font-size:40px;
+      }
+
+      .hero p{
+        font-size:18px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+
+  <nav>
+    <h1>Portfolio</h1>
+
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+
+  <section class="hero">
+
+    <div>
+
+      <!-- Replace profile.jpg -->
+
+      <img src="profile.jpg" alt="Profile Image">
+
+      <h2>Aatiffa Farhana</h2>
+
+      <p>
+        Pre-final year student passionate about Artificial Intelligence,
+        Software Development, and Data Analytics with strong interest in
+        building intelligent applications and solving real-world problems.
+      </p>
+
+      <a href="https://github.com/AatiffaFarhana" class="btn" target="_blank">
+        GitHub
+      </a>
+
+      <a href="https://www.linkedin.com/in/aatiffa-farhana-a-0242862a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="btn" target="_blank">
+        LinkedIn
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- About -->
+
+  <section id="about">
+
+    <h1 class="title">About Me</h1>
+
+    <div class="about-box">
+
+      <p>
+        I am currently pursuing my pre-final year and actively working on
+        projects related to Artificial Intelligence and Data Analytics.
+        I enjoy developing practical applications that improve user
+        experiences and solve real-world problems.
+      </p>
+
+      <br>
+
+      <h3>CGPA : 8.23</h3>
+
+      <br>
+
+      <h3>Areas of Interest</h3>
+
+      <p>
+        Artificial Intelligence, Machine Learning,
+        Data Analytics, Software Development
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- Skills -->
+
+  <section id="skills">
+
+    <h1 class="title">Skills</h1>
+
+    <div class="skills">
+
+      <div class="skill">Python</div>
+      <div class="skill">Java</div>
+      <div class="skill">SQL</div>
+      <div class="skill">Power BI</div>
+      <div class="skill">Excel</div>
+      <div class="skill">KNIME</div>
+      <div class="skill">Machine Learning</div>
+      <div class="skill">Data Analysis</div>
+
+    </div>
+
+  </section>
+
+  <!-- Projects -->
+
+  <section id="projects">
+
+    <h1 class="title">Projects</h1>
+
+    <div class="projects-container">
+
+      <!-- Project 1 -->
+
+      <div class="project-card">
+
+        <h3>AI Tutor – Personalized Learning Assistant</h3>
+
+        <p>
+          Developed an AI-based learning assistant that provides personalized
+          study guidance based on subjects, interests, and learning preferences.
+          The system recommends study materials and structured study plans to
+          improve learning efficiency.
+        </p>
+
+        <a href="https://github.com/Shapna666/ai_tutor" target="_blank">
+          GitHub Link
+        </a>
+
+      </div>
+
+      <!-- Project 2 -->
+
+      <div class="project-card">
+
+        <h3>AI Resume Ranker</h3>
+
+        <p>
+          Built an intelligent resume ranking system that compares resumes
+          with job descriptions and identifies skill matching using AI-based
+          analysis techniques.
+        </p>
+
+        <a href="https://github.com/AatiffaFarhana/ai-resume-ranker" target="_blank">
+          GitHub Link
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Certifications -->
+
+  <section id="certifications">
+
+    <h1 class="title">Certifications</h1>
+
+    <div class="certifications">
+
+      <div class="certificate">
+        <img src="powerbi.jpg" alt="">
+        <h3>Microsoft Certified Power BI Data Analyst</h3>
+      </div>
+
+      <div class="certificate">
+        <img src="boardinfinity.jpg" alt="">
+        <h3>Data Science for Beginners - Board Infinity</h3>
+      </div>
+
+      <div class="certificate">
+        <img src="knime.jpg" alt="">
+        <h3>Basic Proficiency in KNIME Platform</h3>
+      </div>
+
+      <div class="certificate">
+        <img src="guvi.jpg" alt="">
+        <h3>GUVI Generative AI</h3>
+      </div>
+
+      <div class="certificate">
+        <img src="linkedin-java.jpg" alt="">
+        <h3>LinkedIn Getting Started as Java Developer</h3>
+      </div>
+
+      <div class="certificate">
+        <img src="cisco.jpg" alt="">
+        <h3>Cisco Cybersecurity Essentials</h3>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Contact -->
+
+  <section id="contact">
+
+    <h1 class="title">Contact</h1>
+
+    <div class="contact-box">
+
+      <p>Email : aatiffafarhanaa@gmail.com</p>
+
+      <br>
+
+      <p>Phone : +91 8015311395</p>
+
+      <br>
+
+      <p>Location : Madurai, Tamil Nadu</p>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+
+  <footer>
+    © 2026 Aatiffa Farhana | Portfolio Website
+  </footer>
+
+</body>
+</html>
